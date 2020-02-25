@@ -1,0 +1,13 @@
+clc;
+clear all;
+close all;
+t=0:0.1:20;
+y1=t.*(t>=0).*(t<5);
+y2=(10-t).*(t>=5).*(t<10);
+y3=(t-15).*(t>=10).*(t<15);
+y4=(t-20).*(t>=15).*(t<=20);
+y=y3+y4;
+plot(t,y);
+title('Triangular Wave');
+xlabel('Time');
+ylabel('Amplitude');
